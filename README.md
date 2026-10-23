@@ -3,7 +3,7 @@
 ## The task
 Northstar Labs receives access requests as free-text messages. Build a small runnable application that uses a language model to turn those messages into structured records and a review queue for the IT team. The supplied company, people and requests are fictional.
 
-Read docs/requirements.md for the operating context and required behavior, materials/office-policy.md for review rules, and snapshot.schema.json for the record format. The 20 JSON exports in materials/requests/ are your starting data. Choose a CLI, service or web application as the interface.
+Read docs/requirements.md for the operating context and required behavior, materials/office-policy.md for review rules, and snapshot.schema.json for the record format. The 20 JSON exports in materials/requests/ are your starting data. Choose an interface suited to the IT team: a CLI, service or web application. Operators should be able to start intake, inspect completed results while other requests are pending, and resume unfinished work through the documented interface.
 
 ## What to submit
 | Path | Content |
