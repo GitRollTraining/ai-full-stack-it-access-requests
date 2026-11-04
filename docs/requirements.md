@@ -36,7 +36,7 @@ The original developer and the next operator may be in different offices. The op
 - Use message content as the source of business facts. Preserve missing values, conflicting alternatives and explicit corrections according to the policy. Keep document identity distinct from the request ID stated in the message.
 - Apply the supplied review policy and display each request's status, owner and next action. Approval decisions belong to the named human reviewers.
 - Record input filenames and SHA-256 hashes. Reuse results when the source and relevant processing settings are unchanged, refresh affected results when those inputs or settings change, and retain earlier versions. Process each message independently and make failures visible with a reproducible retry command.
-- Handle malformed output, provider errors, refusal and interrupted responses explicitly. Keep model/provider settings configurable and document a supported configuration. The facilitator supplies model-provider access through environment variables.
+- Handle malformed output, provider errors, refusal and interrupted responses explicitly. Keep model/provider settings configurable and document a supported configuration. The facilitator supplies an API key through the environment variable API_KEY.
 
 ## Verification
 
