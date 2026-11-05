@@ -20,6 +20,6 @@ This brief ships as CHALLENGE.md; the README.md below is yours to write.
 | Coding-session capture | Session record paired with the submitted commit, collected through the facilitator's capture setup |
 
 ## Submission
-Commit and push the application, outputs and session capture. Submit the repository URL and exact commit through the Classroom assignment. The facilitator supplies the assignment and capture instructions.
+Commit and push the application, outputs and session capture to your repository's default branch. Submit only the root repository link (`https://github.com/<your-account>/<repository>`) through the Classroom assignment. The facilitator supplies the assignment and capture instructions.
 
 Submit the implemented provider integration and source-grounded validation procedure. Use mocked responses for reproducible development examples, and label each recorded observation with its configuration and whether it used a mock or provider response. The committed deliverables may come from mocked or provider responses; each record's response_source says which.
