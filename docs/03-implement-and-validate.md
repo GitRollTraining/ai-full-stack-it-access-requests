@@ -12,8 +12,9 @@ Start from your committed `planning/plan.md` (`docs/02-plan-with-test-plan.md`).
 
 1. Start Codex in the root of your clone and ask it to build `planning/plan.md` in its step order.
    Your request says:
-   - for each step, first write the test the plan names, run it and see it fail, then write the
-     code until it passes;
+   - for each step, first write the test the plan names, run it and see it fail, and commit the
+     failing test (`Test first: <step>`); then write the code until it passes, and commit it
+     (`Step <n>: <step>`), so the history shows each test failing before its code exists;
    - every test uses mock responses saved under `tests/mock_responses/`, and no test calls the real
      model or reads `API_KEY`;
    - the expected values in each test are the expected facts of the test plan, not values copied
@@ -27,7 +28,7 @@ Start from your committed `planning/plan.md` (`docs/02-plan-with-test-plan.md`).
 
    (If your plan chose another test command, use it, still with `API_KEY` unset, and write it in
    your README.)
-3. When the steps are done, save the full test run and commit the code, the tests and the run:
+3. When the steps are done, save the full test run and commit it with anything not yet committed:
 
    ```bash
    env -u API_KEY python3 -m unittest discover -s tests -v > planning/test-run.txt 2>&1
@@ -69,6 +70,7 @@ Start from your committed `planning/plan.md` (`docs/02-plan-with-test-plan.md`).
 - `planning/validation.md` has as many rows as `planning/spec.md`.
 - Pick two rows marked met and open their evidence: each shows the requirement, not only a passing test.
 - `env -u API_KEY python3 -m unittest discover -s tests` ends with `OK` on a fresh run.
+- `git log --oneline` shows a `Test first:` commit before each step's code commit.
 
 ## After class, on your own
 
@@ -77,6 +79,9 @@ Start from your committed `planning/plan.md` (`docs/02-plan-with-test-plan.md`).
    action against the five rules of `materials/office-policy.md`, in order.
 3. The accuracy check: compare the extracted fields with the expected facts you wrote from the
    messages, as `CHALLENGE.md` asks for `deliverables/accuracy.md`.
+4. The rest of the files `CHALLENGE.md` § What to submit lists under `deliverables/`, and the README
+   it asks for. Class time covers the spec, the plan, the build and its validation; these files
+   finish the submission.
 
 The facilitator supplies a model key through `API_KEY` for runs against the real model; the tests
 never use it.
