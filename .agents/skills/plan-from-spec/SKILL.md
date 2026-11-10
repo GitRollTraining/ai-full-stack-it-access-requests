@@ -22,7 +22,8 @@ step: the plan is read and corrected by a person before anything is built.
    command, and how the model provider is called. One line each, with its reason.
 2. **Steps, in build order.** A numbered list. Each step names the spec lines it meets
    (`R-03, R-07`), the test from the test plan that is written first and seen to fail, and what is
-   true when the step is done. The first step builds the mock provider the tests use.
+   true when the step is done. The first step builds the mock provider the tests use. Each test
+   belongs to one step only, so every step has a test that fails until that step's code exists.
 3. **Test plan.** A table, one row per case:
 
    | Case | Input | Mock response | Expected facts | Source of the expected facts | Spec lines |
@@ -49,5 +50,6 @@ step: the plan is read and corrected by a person before anything is built.
 - Every expected fact has a quote from a message or the policy beside it.
 - Every case of § Verification has its own row.
 - No step and no test needs `API_KEY`.
+- No test is named by two steps.
 
 Where a spec line is unclear, say so in the plan and ask the person; do not guess a rule.

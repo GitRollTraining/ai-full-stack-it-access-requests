@@ -12,15 +12,19 @@ Start from your committed `planning/plan.md` (`docs/02-plan-with-test-plan.md`).
 
 1. Start Codex in the root of your clone and ask it to build `planning/plan.md` in its step order.
    Your request says:
-   - for each step, first write the test the plan names, run it and see it fail, and commit the
-     failing test (`Test first: <step>`); then write the code until it passes, and commit it
-     (`Step <n>: <step>`), so the history shows each test failing before its code exists;
+   - for each step, first write the test the plan names, run it and show it failing, then stop;
+     after you commit the failing test (`Test first: <step>`), write the code until it passes, then
+     stop again so you commit it (`Step <n>: <step>`);
    - every test uses mock responses saved under `tests/mock_responses/`, and no test calls the real
      model or reads `API_KEY`;
    - the expected values in each test are the expected facts of the test plan, not values copied
      from a run;
    - after each step, run the whole test suite and stop if anything fails.
-2. Watch the steps. After each one, run the tests yourself, with `API_KEY` unset:
+2. You make the commits: Codex's sandbox does not let it write to `.git`, and the commits are your
+   record that each test failed before its code existed. If a step's new test already passes
+   before any code is written, say so in its commit message (`Test first: <step> (already
+   passes)`) rather than making it fail on purpose.
+3. Watch the steps. After each one, run the tests yourself, with `API_KEY` unset:
 
    ```bash
    env -u API_KEY python3 -m unittest discover -s tests
@@ -28,7 +32,7 @@ Start from your committed `planning/plan.md` (`docs/02-plan-with-test-plan.md`).
 
    (If your plan chose another test command, use it, still with `API_KEY` unset, and write it in
    your README.)
-3. When the steps are done, save the full test run and commit it with anything not yet committed:
+4. When the steps are done, save the full test run and commit it with anything not yet committed:
 
    ```bash
    env -u API_KEY python3 -m unittest discover -s tests -v > planning/test-run.txt 2>&1
