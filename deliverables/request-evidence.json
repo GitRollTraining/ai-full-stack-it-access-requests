@@ -1,0 +1,18 @@
+{
+  "status": "draft_not_implemented",
+  "note": "No provider integration or model request exists yet. Replace this draft with credential-redacted evidence from the implemented integration.",
+  "provider": null,
+  "model_id": null,
+  "configuration": null,
+  "credential_environment_variable": "API_KEY",
+  "credential_redacted_request": null,
+  "implemented_response_handling": null,
+  "required_evidence": [
+    "Supported provider, endpoint, exact model ID and request configuration",
+    "Extraction prompt and schema supplied to the model",
+    "Redacted example request with no API key or secret values",
+    "Code references for completion-status checks before using extracted data",
+    "Code references for schema validation, refusal, interrupted output, malformed output and provider errors",
+    "Timeout, retry and rate-limit handling actually implemented"
+  ]
+}

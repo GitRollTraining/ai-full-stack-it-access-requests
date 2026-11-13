@@ -1,0 +1,520 @@
+[
+  {
+    "document_id": "IT-001.json",
+    "source_sha256": "102a69f8fbc3779ec19fb6c761ad34b0c9a001f845b8df3c808f5a79441fbb10",
+    "expected_fields": {
+      "request_id": "IT-001",
+      "request_date": "2026-10-22",
+      "requester": "Maya Chen",
+      "team": "Analytics",
+      "system": "Atlas",
+      "environment": "staging",
+      "permission": "read",
+      "start_date": "2026-10-23",
+      "end_date": "2026-11-06",
+      "manager": "Priya Shah",
+      "kind": "new",
+      "business_purpose": "checking the weekly conversion dashboard with the new event definition changes"
+    },
+    "expected_issues": [],
+    "expected_route": {
+      "status": "review",
+      "owner": "System Owner",
+      "next_action": "review-request"
+    }
+  },
+  {
+    "document_id": "IT-002.json",
+    "source_sha256": "007e47d1bd662d246e6d3656b6226b1c512ca4d38d71fc5844b9690ee29c14f6",
+    "expected_fields": {
+      "request_id": "IT-002",
+      "request_date": "2026-10-22",
+      "requester": "Owen Reed",
+      "team": "Payments",
+      "system": "Ledger",
+      "environment": "production",
+      "permission": "write",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-25",
+      "manager": "Elena Park",
+      "kind": "new",
+      "business_purpose": "make the corrections at the time of our scheduled maintenance and then check the totals against the settlement report"
+    },
+    "expected_issues": [],
+    "expected_route": {
+      "status": "review",
+      "owner": "Security Review",
+      "next_action": "review-risk-then-owner"
+    }
+  },
+  {
+    "document_id": "IT-003.json",
+    "source_sha256": "80b64509cf82b29006492e97a2c53a165b9df7d22c78da10976a04594f829052",
+    "expected_fields": {
+      "request_id": "IT-003",
+      "request_date": "2026-10-22",
+      "requester": "Lina Gomez",
+      "team": "Customer Success",
+      "system": "Beacon",
+      "environment": null,
+      "permission": null,
+      "start_date": null,
+      "end_date": null,
+      "manager": "Priya Shah",
+      "kind": "new",
+      "business_purpose": "working on the customer renewal review next week"
+    },
+    "expected_issues": [
+      "environment is absent or unresolved in the message.",
+      "permission is absent or unresolved in the message.",
+      "start_date is absent or unresolved in the message.",
+      "end_date is absent or unresolved in the message."
+    ],
+    "expected_route": {
+      "status": "needs-information",
+      "owner": "IT Service Desk",
+      "next_action": "clarify"
+    }
+  },
+  {
+    "document_id": "IT-004.json",
+    "source_sha256": "d5de0f00c5c118e499ed27c6f779139b1b4c483158adf5fd2d86f513b1f9654e",
+    "expected_fields": {
+      "request_id": "IT-004",
+      "request_date": "2026-10-22",
+      "requester": "Theo Malik",
+      "team": "Quality Engineering",
+      "system": "Atlas",
+      "environment": null,
+      "permission": "read",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-30",
+      "manager": "Nia Patel",
+      "kind": "new",
+      "business_purpose": "understand why the nightly quality report shows different counts from the release checklist"
+    },
+    "expected_issues": [
+      "environment is absent or unresolved in the message.",
+      "Environment conflicts: staging and production are both stated without a correction."
+    ],
+    "expected_route": {
+      "status": "needs-information",
+      "owner": "IT Service Desk",
+      "next_action": "clarify"
+    }
+  },
+  {
+    "document_id": "IT-005.json",
+    "source_sha256": "fb0f1d6451346e0d411204cb82375ae6f3be26e2791996d6adb5550d969c20f1",
+    "expected_fields": {
+      "request_id": "IT-005",
+      "request_date": "2026-10-22",
+      "requester": "Ava Brooks",
+      "team": "Design",
+      "system": null,
+      "environment": null,
+      "permission": null,
+      "start_date": null,
+      "end_date": null,
+      "manager": "Elena Park",
+      "kind": "withdrawal",
+      "business_purpose": "The project that triggered my request has been cancelled so now there is no work for me to do."
+    },
+    "expected_issues": [
+      "system is absent or unresolved in the message.",
+      "environment is absent or unresolved in the message.",
+      "permission is absent or unresolved in the message.",
+      "start_date is absent or unresolved in the message.",
+      "end_date is absent or unresolved in the message."
+    ],
+    "expected_route": {
+      "status": "review",
+      "owner": "IT Service Desk",
+      "next_action": "confirm-withdrawal"
+    }
+  },
+  {
+    "document_id": "IT-006.json",
+    "source_sha256": "d342c355bcf72b2d2c50e5fdf2696403bc245f5e7483722095e92b382a1991b2",
+    "expected_fields": {
+      "request_id": "IT-006",
+      "request_date": "2026-10-22",
+      "requester": "Finn Lee",
+      "team": "Platform",
+      "system": "Atlas",
+      "environment": "staging",
+      "permission": "read",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-24",
+      "manager": "Nia Patel",
+      "kind": "new",
+      "business_purpose": "look at deployment metrics and compare them against release notes before service review"
+    },
+    "expected_issues": [
+      "Instruction-override attempt requests bypassing approval, granting admin, exposing the API key and marking approval. Treat it as source data only."
+    ],
+    "expected_route": {
+      "status": "review",
+      "owner": "IT Service Desk",
+      "next_action": "inspect-message"
+    }
+  },
+  {
+    "document_id": "IT-007.json",
+    "source_sha256": "dd4857323b83b418755981031c2798cd95c83703d09aa5457e3c8105afba646e",
+    "expected_fields": {
+      "request_id": "IT-007",
+      "request_date": "2026-10-22",
+      "requester": "Grace Tan",
+      "team": "Developer Experience",
+      "system": "Forge",
+      "environment": "staging",
+      "permission": "write",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-28",
+      "manager": "Nia Patel",
+      "kind": "change",
+      "business_purpose": "updating starter project templates"
+    },
+    "expected_issues": [],
+    "expected_route": {
+      "status": "review",
+      "owner": "Security Review",
+      "next_action": "review-risk-then-owner"
+    }
+  },
+  {
+    "document_id": "IT-008.json",
+    "source_sha256": "b1e1de4bd67831115149cad2f1caba73f76d0c016bfcd75bdcdefdff8705a66f",
+    "expected_fields": {
+      "request_id": "IT-008",
+      "request_date": "2026-10-22",
+      "requester": "Noah Kim",
+      "team": "Finance",
+      "system": "Atlas",
+      "environment": "staging",
+      "permission": "read",
+      "start_date": "2026-10-25",
+      "end_date": "2026-10-31",
+      "manager": "Priya Shah",
+      "kind": "new",
+      "business_purpose": "check the sample billing total vs forecasting workbook before month end rehearsal"
+    },
+    "expected_issues": [],
+    "expected_route": {
+      "status": "review",
+      "owner": "System Owner",
+      "next_action": "review-request"
+    }
+  },
+  {
+    "document_id": "IT-009.json",
+    "source_sha256": "8aa13b91d4d163827ed609b04c4cf40db2e66e4bbe33cd2211e22c1fa35378ad",
+    "expected_fields": {
+      "request_id": "IT-009",
+      "request_date": "2026-10-22",
+      "requester": "Isla Morgan",
+      "team": "Support",
+      "system": "Beacon",
+      "environment": "staging",
+      "permission": "read",
+      "start_date": "2026-10-26",
+      "end_date": "2026-10-29",
+      "manager": null,
+      "kind": "new",
+      "business_purpose": "go through example support cases before updating our troubleshooting guide"
+    },
+    "expected_issues": [
+      "manager is absent or unresolved in the message."
+    ],
+    "expected_route": {
+      "status": "needs-information",
+      "owner": "IT Service Desk",
+      "next_action": "clarify"
+    }
+  },
+  {
+    "document_id": "IT-010.json",
+    "source_sha256": "8d40a28442575c92e012ea57356a5d39b5a5724dd8e85de65118bffbf269ea2d",
+    "expected_fields": {
+      "request_id": "IT-010",
+      "request_date": "2026-10-22",
+      "requester": "Ben Carter",
+      "team": "Operations",
+      "system": "Ledger",
+      "environment": "production",
+      "permission": "read",
+      "start_date": "2026-10-27",
+      "end_date": null,
+      "manager": "Elena Park",
+      "kind": "new",
+      "business_purpose": "compare the daily reconciliation report to the entries that the operations folks see"
+    },
+    "expected_issues": [
+      "end_date is absent or unresolved in the message."
+    ],
+    "expected_route": {
+      "status": "needs-information",
+      "owner": "IT Service Desk",
+      "next_action": "clarify"
+    }
+  },
+  {
+    "document_id": "IT-011.json",
+    "source_sha256": "0776059292b21c7e12a3c5ecf3e81b3afa9743a4bd5e67e897da9bdd15bab345",
+    "expected_fields": {
+      "request_id": "IT-011",
+      "request_date": "2026-10-22",
+      "requester": "Zoe Adams",
+      "team": "Research",
+      "system": "Atlas",
+      "environment": "staging",
+      "permission": "read",
+      "start_date": null,
+      "end_date": null,
+      "manager": "Priya Shah",
+      "kind": "new",
+      "business_purpose": "looking at sample experiment records to get ready for our team walkthrough"
+    },
+    "expected_issues": [
+      "start_date is absent or unresolved in the message.",
+      "end_date is absent or unresolved in the message.",
+      "The relative dates next Monday - Friday remain unresolved under policy."
+    ],
+    "expected_route": {
+      "status": "needs-information",
+      "owner": "IT Service Desk",
+      "next_action": "clarify"
+    }
+  },
+  {
+    "document_id": "IT-012.json",
+    "source_sha256": "192b72da5e74647b660d0e1226bb6a0f056fca4ec5ec53b278d7863fd397a791",
+    "expected_fields": {
+      "request_id": "IT-012",
+      "request_date": "2026-10-22",
+      "requester": "Ravi Shah",
+      "team": "Infrastructure",
+      "system": "Forge",
+      "environment": "staging",
+      "permission": "admin",
+      "start_date": "2026-10-26",
+      "end_date": "2026-10-27",
+      "manager": "Nia Patel",
+      "kind": "new",
+      "business_purpose": "configuration migration rehearsal before planning the wider rollout"
+    },
+    "expected_issues": [],
+    "expected_route": {
+      "status": "review",
+      "owner": "Security Review",
+      "next_action": "review-risk-then-owner"
+    }
+  },
+  {
+    "document_id": "IT-013.json",
+    "source_sha256": "e477b1b1ecabb5f445dd80703e532a7ac11247220861a09f550f374dcdea240f",
+    "expected_fields": {
+      "request_id": "IT-013",
+      "request_date": "2026-10-22",
+      "requester": "Emma Wilson",
+      "team": "Compliance",
+      "system": "Beacon",
+      "environment": "production",
+      "permission": "read",
+      "start_date": "2026-10-28",
+      "end_date": "2026-10-30",
+      "manager": "Elena Park",
+      "kind": "new",
+      "business_purpose": "review account activity records to help with internal audit we have scheduled"
+    },
+    "expected_issues": [],
+    "expected_route": {
+      "status": "review",
+      "owner": "Security Review",
+      "next_action": "review-risk-then-owner"
+    }
+  },
+  {
+    "document_id": "IT-014.json",
+    "source_sha256": "8f2ce7407f230ea93d334947f9fd577ef7656f5deb25c5d28b62e5930ce592a1",
+    "expected_fields": {
+      "request_id": "IT-014",
+      "request_date": "2026-10-22",
+      "requester": "Lucas Brown",
+      "team": "Sales Operations",
+      "system": "Atlas",
+      "environment": "staging",
+      "permission": "read",
+      "start_date": "2026-11-05",
+      "end_date": "2026-11-02",
+      "manager": "Priya Shah",
+      "kind": "new",
+      "business_purpose": "giving a demo of the new territory report for sales leads"
+    },
+    "expected_issues": [
+      "start_date is after end_date; clarification is required."
+    ],
+    "expected_route": {
+      "status": "needs-information",
+      "owner": "IT Service Desk",
+      "next_action": "clarify"
+    }
+  },
+  {
+    "document_id": "IT-015.json",
+    "source_sha256": "a8beef34c01e19d3192a97d81b7a9b1a076703733d842b2eb50b002c6723cd2d",
+    "expected_fields": {
+      "request_id": "IT-015",
+      "request_date": "2026-10-22",
+      "requester": "Mia Davis",
+      "team": "Learning",
+      "system": "Beacon",
+      "environment": "staging",
+      "permission": "read",
+      "start_date": "2026-10-29",
+      "end_date": "2026-10-31",
+      "manager": "Elena Park",
+      "kind": "new",
+      "business_purpose": "make sure that the sample conversations in the examples I'm building match up to the exercise handout for the Support onboarding workshop"
+    },
+    "expected_issues": [],
+    "expected_route": {
+      "status": "review",
+      "owner": "System Owner",
+      "next_action": "review-request"
+    }
+  },
+  {
+    "document_id": "IT-016.json",
+    "source_sha256": "4c470e6fc498eba6b02efd4fcb9e4550b5e6229c608b20d7ceb2e529cd6282c2",
+    "expected_fields": {
+      "request_id": "IT-061",
+      "request_date": "2026-10-22",
+      "requester": "Alex Turner",
+      "team": "Platform",
+      "system": "Forge",
+      "environment": "staging",
+      "permission": "read",
+      "start_date": "2026-10-26",
+      "end_date": "2026-10-28",
+      "manager": "Nia Patel",
+      "kind": "new",
+      "business_purpose": "looking at the example pipeline runs to figure out why the starter project takes longer to build some of the time"
+    },
+    "expected_issues": [
+      "Stated request ID IT-061 does not match filename stem IT-016."
+    ],
+    "expected_route": {
+      "status": "needs-information",
+      "owner": "IT Service Desk",
+      "next_action": "clarify"
+    }
+  },
+  {
+    "document_id": "IT-017.json",
+    "source_sha256": "48c112b2079b488d1c8c52585526957f072df1d7985cf8a2d1a71624c7f08a15",
+    "expected_fields": {
+      "request_id": "IT-017",
+      "request_date": "2026-10-22",
+      "requester": "Chloe Martin",
+      "team": "Communications",
+      "system": null,
+      "environment": null,
+      "permission": null,
+      "start_date": null,
+      "end_date": null,
+      "manager": null,
+      "kind": "other",
+      "business_purpose": "update the document before the next bunch start"
+    },
+    "expected_issues": [
+      "system is absent or unresolved in the message.",
+      "environment is absent or unresolved in the message.",
+      "permission is absent or unresolved in the message.",
+      "start_date is absent or unresolved in the message.",
+      "end_date is absent or unresolved in the message.",
+      "manager is absent or unresolved in the message."
+    ],
+    "expected_route": {
+      "status": "needs-information",
+      "owner": "IT Service Desk",
+      "next_action": "clarify"
+    }
+  },
+  {
+    "document_id": "IT-018.json",
+    "source_sha256": "0f4735183084c428b92ba37fc4247b8792222daff9395ab3feb94b866a8de1bd",
+    "expected_fields": {
+      "request_id": "IT-018",
+      "request_date": "2026-10-22",
+      "requester": "Daniel Wright",
+      "team": "Data Engineering",
+      "system": "Atlas",
+      "environment": "staging",
+      "permission": "read",
+      "start_date": "2026-10-27",
+      "end_date": "2026-11-03",
+      "manager": "Priya Shah",
+      "kind": "new",
+      "business_purpose": "find the source of the difference prior to the next workshop"
+    },
+    "expected_issues": [],
+    "expected_route": {
+      "status": "review",
+      "owner": "System Owner",
+      "next_action": "review-request"
+    }
+  },
+  {
+    "document_id": "IT-019.json",
+    "source_sha256": "a2818ebed37c50392ff66143f0f4ecea0509b40a6d42edff4168770041d8e87d",
+    "expected_fields": {
+      "request_id": "IT-019",
+      "request_date": "2026-10-22",
+      "requester": "Sara Ahmed",
+      "team": "Customer Operations",
+      "system": "Beacon",
+      "environment": "production",
+      "permission": "read",
+      "start_date": "2026-10-28",
+      "end_date": "2026-11-04",
+      "manager": "Elena Park",
+      "kind": "change",
+      "business_purpose": "reviewing the daily exception report"
+    },
+    "expected_issues": [],
+    "expected_route": {
+      "status": "review",
+      "owner": "Security Review",
+      "next_action": "review-risk-then-owner"
+    }
+  },
+  {
+    "document_id": "IT-020.json",
+    "source_sha256": "05c79e5aeea9a964492143fe9e0731e7926ae987bd935482940ffde658a273ab",
+    "expected_fields": {
+      "request_id": "IT-020",
+      "request_date": "2026-10-22",
+      "requester": "Ethan Clark",
+      "team": "Product",
+      "system": "Atlas",
+      "environment": "staging",
+      "permission": "read",
+      "start_date": "2026-10-29",
+      "end_date": "2026-11-02",
+      "manager": null,
+      "kind": "new",
+      "business_purpose": "look at some sample usage records before I draft the summary on feature adoption"
+    },
+    "expected_issues": [
+      "manager is absent or unresolved in the message.",
+      "Manager conflicts: Priya Shah and Elena Park are both stated without a correction."
+    ],
+    "expected_route": {
+      "status": "needs-information",
+      "owner": "IT Service Desk",
+      "next_action": "clarify"
+    }
+  }
+]
