@@ -1,6 +1,13 @@
 {
   "enabled": true,
   "telemetry": false,
+  "redaction": {
+    "pii": {
+      "enabled": true,
+      "email": true,
+      "phone": true
+    }
+  },
   "checkpoints": {
     "primary": {
       "type": "git-refs"
